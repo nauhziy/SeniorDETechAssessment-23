@@ -22,6 +22,13 @@ You can use common scheduling solutions such as cron or airflow to implement the
 Note: Please submit the processed dataset and scripts used
 
 ## User Instructions
+This sets up the cronjob on docker, which runs the data cleaning script every hour. Once it's run, it will transfer the files from the `data_ingest` folder to the `data_processed` folder such that it won't be processed again. Also note that applicants will be filtered into the respective folders based on whether they are successful or not.
 
-source airflow_venv/bin/activate
+Note that this has been set up as a cron job for overall simplicity in terms of implementation. For more complex data orchestration tasks, airflow would be preferred. But given the scope of the current ask, this will be much easier to set up and maintain.
+
+This assumes that docker has already been installed.
+
+1. Navigate into the folder and run `docker build -t data_cleaning_cron .` to build the docker image
+
+2. Run `docker run -d --name data_cleaning_container data_cleaning_cron` to run the docker container from the image.
 
