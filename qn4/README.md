@@ -8,4 +8,4 @@ Display a graph to show the number cases in Singapore over time using the APIs f
 Note: please submit screenshots of the dashboard
 
 ## Notes
-The notebook and screen shot is available in the folder.
+The notebook and screen shot is available in the folder. Take note that the API will be deprecated on May 15, so it might not be reproducible.
