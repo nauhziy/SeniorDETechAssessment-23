@@ -26,6 +26,7 @@ This folder is organised into the following:
 1. `sql_queries` - these are the example queries that an analyst might use
 2. `sql_setup` - these sql statements both setup and inserts mock data into the database. In a production instance, there'll be no need to insert data into the database.
 3. `erd.png` - this is the Entity Relationship Diagram that depicts the database schema
+[ERD](erd.png)
 
 ## User Instructions
 1. Set up credentials in a .env file with the following env variables
