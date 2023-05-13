@@ -20,3 +20,23 @@ Analysts from the e-commerce company will need to query some information from th
 You are tasked to write a SQL statement for each of the following task:
 1. Which are the top 10 members by spending
 2. Which are the top 3 items that are frequently brought by members
+
+## Information
+This folder is organised into the following:
+1. `sql_queries` - these are the example queries that an analyst might use
+2. `sql_setup` - these sql statements both setup and inserts mock data into the database. In a production instance, there'll be no need to insert data into the database.
+3. `erd.png` - this is the Entity Relationship Diagram that depicts the database schema
+
+## User Instructions
+1. Set up credentials in a .env file with the following env variables
+    - POSTGRES_PASSWORD
+    - POSTGRES_DB
+    - POSTGRES_USER
+2. Run `docker-compose build` to build the docker image.
+3. Run `docker-compose up db` to set up the postgres database
+
+To run the queries
+1. Run `docker ps` and get the container id for the postgres instance
+2. Run `docker exec -it <container_id> bash` to SSH into the container
+3. Run `psql -U <POSTGRES_USER> -d <POSTGRES_DB> -W` to log in, and then enter `<POSTGRES_PASSWORD>` when prompted.
+4. Run queries!
