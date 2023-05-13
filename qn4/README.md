@@ -6,3 +6,6 @@ Your team decided to use the public data from https://documenter.getpostman.com/
 Display a graph to show the number cases in Singapore over time using the APIs from https://covid19api.com/.
 
 Note: please submit screenshots of the dashboard
+
+## Notes
+The notebook and screen shot is available in the folder.
