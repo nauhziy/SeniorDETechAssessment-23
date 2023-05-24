@@ -12,7 +12,7 @@ We will be referencing the database from Section2 in this design.. This database
     - Update databse with new items
     - Remove old items from database
 
-## Database Architecture
+### Database Architecture
 This section will cover some of the design considerations when building out the database architecture.
 
 1. SQL vs NoSQL
@@ -24,6 +24,6 @@ This section will cover some of the design considerations when building out the 
 
 2. User Permissioning
     - For the use cases listed above, it seems like the teams will require the following permissions. While these permissions are retrictive, we can use stored procedures to improve the accuracy of updates and reduce the impact of potential human error.
-    - Logistics: Universal read permissions, with write permissions for the `transactions` table. Specifically, only the `UPDATE` write permission is needed.
+    - Logistics: Universal read permissions, with write permissions for the `transactions` table. Specifically, only the `UPDATE` write permission is needed. When transactions are completed, users can updated the `completed` value for the given transaction, to show that it has been fulfilled.
     - Analytics: Universal read permissions only.
     - Sales: `UPDATE` write permission for the `inventory` table. In general it's not good practice to hard delete data (e.g. when removing items from the database), so we could add a column `deleted` with a boolean flag that gets updated so that users will know if the item is still available or not.
